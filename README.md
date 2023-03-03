@@ -40,7 +40,26 @@
 
 ## File Structure
 
-## App summary
+## Approach
+ Development was done in iterations
+
+
+ 1st: create basic structure for files, required assets, color palette CSS.
+ 2nd: create basic HTML structure for main elements and style it
+    A. Nav Component ✅
+    B.Cart Component UI  ✅
+    C. Product Component UI ⌛
+    D. composing C & D + logic ( at the end)
+ 3rd: add part of logic to render products and test it
+ 4th: add cart drop down logic and style + test
+ 5th: add quick view modal on product + test
+ 6th: review overall app design and logic
+ 7th: implement local storage usage
+ 8th: test app vs requirements
+ 9th: minify + deploy
+
+Accessibility was considered during all development steps.
+
 
 ## Demo
 
