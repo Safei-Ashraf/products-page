@@ -1,7 +1,8 @@
 {
-  "name": "products-page",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Safei Ashraf <safei.ashraf@gmail.com>",
-  "license": "MIT"
+	"name": "products-page",
+	"version": "1.0.0",
+	"main": "./scripts/main.js",
+	"type": "module",
+	"author": "Safei Ashraf <safei.ashraf@gmail.com>",
+	"license": "MIT"
 }
