@@ -42,21 +42,29 @@
 
 ## Approach
  Development was done in iterations
+Create Basic Project Structure
+Create Navigation
+Create Cart
+Create HTML template for main layout + Product and style it
+Convert Product HTML to JavaScript DOM elements
+Refactor Product JS into smaller components
+Review Styles and responsivness
 
+TODO: ⌛
 
- 1st: create basic structure for files, required assets, color palette CSS.
- 2nd: create basic HTML structure for main elements and style it
-    A. Nav Component ✅
-    B.Cart Component UI  ✅
-    C. Product Component UI ⌛
-    D. composing C & D + logic ( at the end)
- 3rd: add part of logic to render products and test it
- 4th: add cart drop down logic and style + test
- 5th: add quick view modal on product + test
- 6th: review overall app design and logic
- 7th: implement local storage usage
- 8th: test app vs requirements
- 9th: minify + deploy
+Cart Logic to count Added products
+Cart style to display list of added products on hover in a dropdown menu
+
+Modal Logic to show on quickView button click
+Modal  has the same details displayed in the product card
+
+Store changes made into local storage
+Check on app load, if there is data in Local storage use it, if not use default array
+
+Further TODO:
+[] test app vs requirements
+[] get review
+[] minify + deploy
 
 Accessibility was considered during all development steps.
 
