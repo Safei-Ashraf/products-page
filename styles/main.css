@@ -103,6 +103,8 @@ main, header, footer{
 	justify-content: center;
 	align-items: center;
 	background-color: var(--card-bg);
+	border-radius: 8px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }
 
 .product-image{
