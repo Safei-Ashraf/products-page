@@ -1,43 +1,25 @@
 import { products } from "./scripts/productsData.js";
-import {ProductButton} from "./scripts/ProductButton.js"
+import { ProductButton } from "./scripts/ProductButton.js"
+import { ProductText } from "./scripts/ProductText.js";
+import { ProductTitle } from './scripts/ProductTitle.js'
+import { ProductImage } from "./scripts/ProductImage.js";
 
 const container = document.querySelector('#root');
 
-function createCard({name, id, price, imageUrl, isAddedToCart })  {
-
+function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
     const card = document.createElement('div');
     card.classList.add('product-card');
     card.id = id;
-    const cardRedirect = document.createElement('a');
-    cardRedirect.classList.add('product-redirect')
-    const cardImage = document.createElement('img');
-    cardImage.setAttribute('src', imageUrl);
-    cardImage.setAttribute('role', 'presentation');
-    cardImage.classList.add('product-image');
     const cardBody = document.createElement('div');
     cardBody.classList.add('card-body');
-    const cardTitle = document.createElement('h5');
-    cardTitle.classList.add('card-title');
-    cardTitle.textContent = name;
-    const cardText = document.createElement('p');
-    cardText.classList.add('card-text');
-    cardText.textContent = price;
-    const button = ProductButton(isAddedToCart);
-    cardBody.append(cardTitle, cardText, button)
-    cardRedirect.append( cardImage, cardBody )
-    card.appendChild(cardRedirect);
-    container.appendChild(card)
+
+    cardBody.append(ProductTitle(title), ProductText(price), ProductButton(isAddedToCart))
+    card.append( ProductImage(imageUrl, title), cardBody )
+    parent.appendChild(card)
 }
 //Create Card:
-createCard({
-    name: "Careflection M10 in-Ear TWS Wireless Touch Bluetooth Earplugs",
-    id: "product_1",
-    price: "279.00",
-    imageUrl:
-        "https://m.media-amazon.com/images/I/71MgxH82r7L._AC_SL1500_.jpg",
-    isAddedToCart: false,
-});
+
 for (let i = 0; i < products.length; i++)
 {
-    createCard(products[i])
+    createCard(products[i], container)
 }
