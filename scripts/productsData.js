@@ -1,10 +1,10 @@
 export const products = [
 	{
-		title: "3 Pairs Replacement Ear Tips Buds for AirPods Pro，Silicon Ear Buds Tips with Portable Storage Box (Fit in The Charging Case) -White",
+		title: "Chotech True Wireless Earbuds, Big Bass 4 Mics, Clear Calls automatic noise reduction, IPX8 waterproof, Sensitive touch control, Comfortable to wear, Bluetooth 5.2,Tiny Size+ Cover Gift",
 		id: "product_1",
-		price: "65.00",
+		price: "999.00",
 		imageUrl:
-			"https://m.media-amazon.com/images/I/51-Qj0zVkVL._AC_SL1000_.jpg",
+			"https://m.media-amazon.com/images/I/61vqu21QEOL._AC_SL1500_.jpg",
 		isAddedToCart: true,
 	},
 	{
