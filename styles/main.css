@@ -94,7 +94,8 @@ main, header, footer{
 .product-card{
 	position: relative;
 	width: 20%;
-	min-width: 250px;
+	min-width: 300px;
+	max-width: 96vw;
 	max-height: 500px;
 	overflow: hidden;
 	display: flex;
