@@ -166,14 +166,19 @@ main, header, footer{
 	-ms-border-radius: 24px;
 	-o-border-radius: 24px;
 	cursor: pointer;
-	transition: border 0.3s linear;
-	-webkit-transition: border 0.3s linear;
-	-moz-transition: border 0.3s linear;
-	-ms-transition: border 0.3s linear;
-	-o-transition: border 0.3s linear;
+	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
 }
 .quick-view:hover{
 	border: 4px solid var(--secondary-button-bg);
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
 }
 .card-text{
 	display: flex;
