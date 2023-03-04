@@ -5,7 +5,7 @@ export const products = [
 		price: "279.00",
 		imageUrl:
 			"https://m.media-amazon.com/images/I/71MgxH82r7L._AC_SL1500_.jpg",
-		isAddedToCart: false,
+		isAddedToCart: true,
 	},
 	{
 		name: "Airpods PRO 2Sime original | AirpodsPro 2 Semi Original",
