@@ -17,9 +17,9 @@ function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
     card.append( ProductImage(imageUrl, title), cardBody )
     parent.appendChild(card)
 }
-//Create Card:
+(function render() {
 
-for (let i = 0; i < products.length; i++)
-{
-    createCard(products[i], container)
-}
+    for (let i = 0; i < products.length; i++) {
+        createCard(products[i], container)
+    }
+}());
