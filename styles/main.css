@@ -84,7 +84,7 @@ main, header, footer{
 	align-items: center;
 	flex-wrap: wrap;
 	column-gap: 2rem;
-	row-gap: 2rem;
+	row-gap: 3rem;
 	overflow-x: hidden;
 	padding:2rem;
 	width: 100%;
@@ -150,6 +150,7 @@ main, header, footer{
 .remove-cart{
 	background-color: var(--nav-bg);
 	color: var(--nav-text);
+	border-color: var(--nav-bg);
 }
 .add-cart:hover, .remove-cart:hover{
 	background-color: #000;
