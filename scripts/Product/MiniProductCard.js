@@ -1,4 +1,6 @@
 export function MiniProductCard(state, cartContent) {
+    cartContent.innerHTML = '';
+ 
     let cartItems = state.filter(product => product.isAddedToCart === true);
     cartItems.forEach(
         (product) => {

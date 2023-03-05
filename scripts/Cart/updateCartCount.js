@@ -6,4 +6,5 @@ export function updateCartCount(products, cartElem) {
         }
     })
     cartElem.textContent = count;
+    return count;
 }

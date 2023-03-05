@@ -16,9 +16,14 @@ if (JSON.parse(localStorage.getItem('products')) !== null) {
 const cartCount = document.querySelector('.items-count');
 updateCartCount(state, cartCount);
 const cartButton = document.querySelector('.cart-button');
+
+
 cartButton.addEventListener('click', () => {
     const cartContent = document.querySelector('.cart-content');
     cartContent.classList.toggle('show');
+    if (updateCartCount(state, cartCount) === 0) {
+        cartContent.textContent = 'Add products to view cart';
+     };
 })
 
 function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
@@ -45,9 +50,11 @@ function updateRender(state, id) {
     container.innerHTML = '';
     render(state)
     updateCartCount(state, cartCount);
+    MiniProductCard(state,document.querySelector('.cart-content'))
     localStorage.setItem('products', JSON.stringify(state));
 }
 
 //MiniCard
-MiniProductCard(state,document.querySelector('.cart-content'))
 render(state);
+MiniProductCard(state,document.querySelector('.cart-content'))
+
