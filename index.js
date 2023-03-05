@@ -6,7 +6,11 @@ import { ProductImage } from "./scripts/Product/ProductImage.js";
 import {  updateCartCount } from "./scripts/Cart/updateCartCount.js";
 
 const container = document.querySelector('#root');
-const state = products.slice();
+let state = products.slice();
+if (JSON.parse(localStorage.getItem('products')) !== null) {
+    
+    state = JSON.parse(localStorage.getItem('products'));
+}
 const cartCount = document.querySelector('.items-count');
 updateCartCount(state, cartCount);
 
@@ -21,6 +25,7 @@ function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
     button.addEventListener('click', (e) => {
         e.preventDefault();
         updateRender(state, id);
+        localStorage.setItem('products', JSON.stringify(state));
     })
 
     cardBody.append(ProductTitle(title), ProductInfo(price,id), button)
@@ -44,6 +49,5 @@ function updateRender(state, id) {
     render(state)
     updateCartCount(state, cartCount);
 }
-
 
 render(state);
