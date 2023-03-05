@@ -1,4 +1,5 @@
 import { products } from "./scripts/productsData.js";
+import { ProductCard } from "./scripts/Product/ProductCard.js"
 import { ProductButton } from "./scripts/Product/ProductButton.js"
 import { ProductInfo } from "./scripts/Product/ProductPrice.js";
 import { ProductTitle } from './scripts/Product/ProductTitle.js'
@@ -15,25 +16,15 @@ const cartCount = document.querySelector('.items-count');
 updateCartCount(state, cartCount);
 
 function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
-    const card = document.createElement('div');
-    card.classList.add('product-card');
-    card.id = id;
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
+    const [card, cardBody] = ProductCard(id);
     const button = ProductButton(isAddedToCart);
-
     button.addEventListener('click', (e) => {
         e.preventDefault();
         updateRender(state, id);
-        localStorage.setItem('products', JSON.stringify(state));
     })
-
     cardBody.append(ProductTitle(title), ProductInfo(price,id), button)
     card.append(ProductImage(imageUrl, title), cardBody )
     parent.appendChild(card)
-}
-function clearProducts() {
-    container.innerHTML = '';
 }
 function render(data) {
     for (let i = 0; i < data.length; i++) {
@@ -45,9 +36,9 @@ function updateRender(state, id) {
     const index = state.indexOf(clickedProduct);
     clickedProduct.isAddedToCart = !clickedProduct.isAddedToCart;
     state[index] = clickedProduct;
-    clearProducts();
+    container.innerHTML = '';
     render(state)
     updateCartCount(state, cartCount);
+    localStorage.setItem('products', JSON.stringify(state));
 }
-
 render(state);
