@@ -143,7 +143,7 @@ main, header, footer{
 .modal-overlay{
 	background-color: rgba(0, 0, 0, 0.3);
 	position: absolute;
-	top: 4rem;
+	top: 6rem;
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -154,15 +154,20 @@ main, header, footer{
 }
 .modal-content {
 	position: relative;
-	background-color: #fefefe;
+	background-color: var(--card-bg);
 	margin: auto;
 	padding: 0;
 	border: 1px solid #888;
-	width: 50%;
+	width: 100%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	animation-name: animatetop;
 	animation-duration: 0.4s;
 	min-height: 70vh;
+	max-width: 766px;
+
+  }
+  .modal-content .product-card{
+	box-shadow: unset;
   }
   .modal-product-container{
 	display: flex;
@@ -185,7 +190,7 @@ main, header, footer{
 	width: 60%;
 }
 .modal-product-container .card-title{
-	-webkit-line-clamp:5;
+	-webkit-line-clamp:8;
 }
   .modal-product-container .quick-view{
 	display: none;
@@ -202,7 +207,7 @@ main, header, footer{
   .close-modal{
 	font-size: 2rem;
 	position: absolute;
-	right: 1rem;
+	right: 4vw;
 	top: 0.2rem;
 	cursor: pointer;
 	z-index: 6;
@@ -336,14 +341,17 @@ main, header, footer{
 	.product-card{
 		width: 48%;
 		min-width: 240px;
-} 
+	} 
 .modal-product-container .product-card{
 	max-width: 100%;
 	width: 100%;
 	height: 70vh;
   }
+   .close-modal{
+	right: 1vw;
 }
-@media only screen and (min-width: 767px) {
+}
+@media only screen and (min-width: 768px) {
 	.navbar{
 		padding: 0.5rem 2rem;
 	}
@@ -352,4 +360,5 @@ main, header, footer{
 		min-width: unset;
 		width: 25rem;
 	}
+
 }
