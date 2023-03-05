@@ -1,5 +1,5 @@
 import { products } from "./scripts/productsData.js";
-// import { Modal } from "./scripts/Modal/Modal.js";
+import { Modal } from "./scripts/Modal/Modal.js";
 import { ProductCard } from "./scripts/Product/ProductCard.js"
 import { MiniProductCard } from "./scripts/Product/MiniProductCard.js"
 import { ProductButton } from "./scripts/Product/ProductButton.js"
@@ -56,7 +56,8 @@ function updateRender(state, id) {
     container.innerHTML = '';
     render(state)
     updateCartCount(state, cartCount);
-    MiniProductCard(state,document.querySelector('.cart-content'))
+    MiniProductCard(state, document.querySelector('.cart-content'))
+    Modal(id, state)
     localStorage.setItem('products', JSON.stringify(state));
 }
 

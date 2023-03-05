@@ -5,14 +5,5 @@ export function Modal(id, state) {
     const productCard = createCard(productToDisplay, modalContainer);
     modalContainer.innerHTML = '';
     modalContainer.append(productCard);
+    console.log('modal run')
 }
-// Get the modal
-
-
-
-// const modal = document.querySelector('.modal');
-// const overylay = document.querySelector('.modal-overlay');
-// modalbtn.addEventListener('click', () => {
-//     modal.style.display = 'block';
-//     overylay.style.display = 'block';
-// })
