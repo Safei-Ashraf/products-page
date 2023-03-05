@@ -49,17 +49,13 @@ Create HTML template for main layout + Product and style it
 Convert Product HTML to JavaScript DOM elements
 Refactor Product JS into smaller components
 Review Styles and responsivness
-
-TODO: ⌛
-
+Store changes made into local storage
+Check on app load, if there is data in Local storage use it, if not use default array
 Cart Logic to count Added products
 Cart style to display list of added products on hover in a dropdown menu
 
 Modal Logic to show on quickView button click
 Modal  has the same details displayed in the product card
-
-Store changes made into local storage
-Check on app load, if there is data in Local storage use it, if not use default array
 
 Further TODO:
 [] test app vs requirements
