@@ -1,5 +1,6 @@
 import { products } from "./scripts/productsData.js";
 import { ProductCard } from "./scripts/Product/ProductCard.js"
+import { MiniProductCard } from "./scripts/Product/MiniProductCard.js"
 import { ProductButton } from "./scripts/Product/ProductButton.js"
 import { ProductInfo } from "./scripts/Product/ProductPrice.js";
 import { ProductTitle } from './scripts/Product/ProductTitle.js'
@@ -14,6 +15,11 @@ if (JSON.parse(localStorage.getItem('products')) !== null) {
 }
 const cartCount = document.querySelector('.items-count');
 updateCartCount(state, cartCount);
+const cartButton = document.querySelector('.cart-button');
+cartButton.addEventListener('click', () => {
+    const cartContent = document.querySelector('.cart-content');
+    cartContent.classList.toggle('show');
+})
 
 function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
     const [card, cardBody] = ProductCard(id);
@@ -41,4 +47,7 @@ function updateRender(state, id) {
     updateCartCount(state, cartCount);
     localStorage.setItem('products', JSON.stringify(state));
 }
+
+//MiniCard
+MiniProductCard(state,document.querySelector('.cart-content'))
 render(state);
