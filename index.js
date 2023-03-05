@@ -1,4 +1,5 @@
 import { products } from "./scripts/productsData.js";
+// import { Modal } from "./scripts/Modal/Modal.js";
 import { ProductCard } from "./scripts/Product/ProductCard.js"
 import { MiniProductCard } from "./scripts/Product/MiniProductCard.js"
 import { ProductButton } from "./scripts/Product/ProductButton.js"
@@ -8,7 +9,7 @@ import { ProductImage } from "./scripts/Product/ProductImage.js";
 import {  updateCartCount } from "./scripts/Cart/updateCartCount.js";
 
 const container = document.querySelector('#root');
-let state = products.slice();
+export let state = products.slice();
 if (JSON.parse(localStorage.getItem('products')) !== null) {
     
     state = JSON.parse(localStorage.getItem('products'));
@@ -29,7 +30,7 @@ window.onclick = function (event) {
     }
 }
 
-function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
+export function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
     const [card, cardBody] = ProductCard(id);
     const button = ProductButton(isAddedToCart);
     button.addEventListener('click', (e) => {
@@ -39,7 +40,9 @@ function createCard({title, id, price, imageUrl, isAddedToCart }, parent)  {
     cardBody.append(ProductTitle(title), ProductInfo(price,id), button)
     card.append(ProductImage(imageUrl, title), cardBody )
     parent.appendChild(card)
+    return card;
 }
+
 function render(data) {
     for (let i = 0; i < data.length; i++) {
         createCard(data[i], container)
@@ -65,29 +68,4 @@ MiniProductCard(state, document.querySelector('.cart-content'))
 
 
 
-// Get the modal
-const modalbtn = document.querySelector('.modal-button');
-const  modal = document.querySelector('.modal');
-modalbtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-    console.log(modal)
-})
 
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}

@@ -1,6 +1,7 @@
 import { ProductQuickView } from "./ProductQuickView.js";
+import { state as data} from "../../index.js";
 
-export function ProductInfo(price, id) {
+export function ProductInfo(price, id, state) {
 
     const productText = document.createElement('div');
     productText.classList.add('card-text');
@@ -8,7 +9,7 @@ export function ProductInfo(price, id) {
     priceTag.classList.add('price');
     priceTag.textContent = price;
 
-    const quickViewButton = ProductQuickView(id);
+    const quickViewButton = ProductQuickView(id, data);
     productText.append(priceTag, quickViewButton)
 
     return productText;

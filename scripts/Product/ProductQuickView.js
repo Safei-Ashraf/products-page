@@ -1,6 +1,5 @@
 import { Modal } from "../Modal/Modal.js";
-
-export function ProductQuickView(id) {
+export function ProductQuickView(id, state) {
     const quickViewButton = document.createElement('button');
     quickViewButton.setAttribute('aria-labelledby', 'quick view button')
     quickViewButton.classList.add('quick-view');
@@ -9,14 +8,18 @@ export function ProductQuickView(id) {
     quickViewImage.setAttribute('role', 'presentation');
     quickViewButton.appendChild(quickViewImage);
     
-    quickViewButton.addEventListener('click', () => {
-        // console.log('product id', id);
-        
-        Modal(id);
-        /*
-        pass the id to Modal function
-        Modal function find product with that ID and render it as modal content
-        */ 
+    quickViewButton.addEventListener('click', () => { 
+        Modal(id, state);
+        const modal = document.querySelector('.modal');
+        const overylay = document.querySelector('.modal-overlay');
+        modal.style.display = 'block';
+        overylay.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const closeModalButton = document.querySelector('.close-modal')
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            overylay.style.display = 'none';
+})
     })
     return quickViewButton;
 }
