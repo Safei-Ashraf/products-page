@@ -56,11 +56,10 @@ Cart style to display list of added products on hover in a dropdown menu
 
 Modal Logic to show on quickView button click
 Modal  has the same details displayed in the product card
-
-Further TODO:
-[] test app vs requirements
-[] get review
-[] minify + deploy
+Refactor code and split into different components/files.
+Test app vs requirements
+Get review
+minify + deploy
 
 Accessibility was considered during all development steps.
 
