@@ -1,4 +1,4 @@
-# Valinteca Mid-Level Frontend Developer Task
+#  Task
 
 ## Table
 
