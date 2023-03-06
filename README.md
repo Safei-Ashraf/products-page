@@ -3,8 +3,7 @@
 ## Table
 
 -   Instructions
--   File Structure
--   App Summay
+-   Approach
 -   Demo
 
     ## Instructions
@@ -61,7 +60,7 @@ Test app vs requirements
 Get review
 minify + deploy
 
-Accessibility was considered during all development steps.
+<strong>Accessibility</strong> was considered during all development steps.
 Tested via [WAVE](https://wave.webaim.org/report#/https://teal-granita-8383da.netlify.app/)
 
 ## Demo
