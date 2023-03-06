@@ -62,7 +62,7 @@ Get review
 minify + deploy
 
 Accessibility was considered during all development steps.
-
+Tested via [WAVE](https://wave.webaim.org/report#/https://teal-granita-8383da.netlify.app/)
 
 ## Demo
 
