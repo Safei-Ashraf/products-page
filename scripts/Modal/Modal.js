@@ -1,4 +1,4 @@
-import { createCard } from "../../index.js";
+import { createCard } from "../Product/index.js";
 export function Modal(id, state) {
     const productToDisplay = state.filter(product => product.id === id)[0];
     const modalContainer = document.querySelector('.modal-product-container');
