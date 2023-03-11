@@ -187,14 +187,17 @@ footer {
 	height: 70vh;
 }
 .modal-product-container .image-container {
-	height: 60%;
 	width: 100%;
+	max-height: 100%;
+	height: auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .modal-product-container img {
-	width: 60%;
+	width: auto;
+	max-height: 100%;
+	height: auto;
 }
 .modal-product-container .card-title {
 	-webkit-line-clamp: 8;
@@ -266,10 +269,14 @@ footer {
 	padding: 1rem;
 	width: 100%;
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .product-image {
-	width: 100%;
+	width: auto;
 	max-height: 100%;
+	height: auto;
 }
 .card-body {
 	padding: 1rem;
