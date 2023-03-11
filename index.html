@@ -3,50 +3,59 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="description" content="products view page, semi-Amazon like, state update, Author: Safei Ashraf">
+		<meta
+			name="description"
+			content="products view page, semi-Amazon like, state update, Author: Safei Ashraf"
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta property="og:image" content="https://www.wordstream.com/wp-content/uploads/2021/07/how-to-get-amazon-reviews1-1.png"/>
-		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.ico">
+		<meta
+			property="og:image"
+			content="https://www.wordstream.com/wp-content/uploads/2021/07/how-to-get-amazon-reviews1-1.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/assets/favicon.ico"
+		/>
 		<title>Products Page</title>
-		<link rel="stylesheet" href="styles/minified.css" />
+		<link rel="stylesheet" href="styles/main.css" />
 	</head>
 	<body>
 		<header>
 			<nav class="navbar">
 				<div class="logo-container">
 					<a href="#" class="logo">
-						<img src="assets/Amazon-logo-white.svg" alt="amazon logo" class="cart-img">
+						<img
+							src="assets/Amazon-logo-white.svg"
+							alt="amazon logo"
+							class="cart-img"
+						/>
 					</a>
 				</div>
 				<div class="cart-container">
-					<button class="cart-button" >
+					<button class="cart-button">
 						<div class="cart-icon">
-							<img src="assets/cart.svg" alt="cart icon" >
+							<img src="assets/cart.svg" alt="cart icon" />
 						</div>
 						<div class="items-count"></div>
 					</button>
-					<ul id="cart-dropdown" class="cart-content">
-					</ul>
+					<ul id="cart-dropdown" class="cart-content"></ul>
 				</div>
 			</nav>
 		</header>
 		<main>
 			<div class="modal-overlay">
 				<div class="modal">
-				   <div class="modal-content">
-					   <span class="close-modal">&times;</span>
-					   <div class="modal-product-container">
-   
-					   </div>
-				   </div>
-			   </div>
+					<div class="modal-content">
+						<span class="close-modal">&times;</span>
+						<div class="modal-product-container"></div>
+					</div>
+				</div>
 			</div>
-			<div class="products-container" id="root">
-
-				
-			</div>
+			<div class="products-container" id="root"></div>
 		</main>
-		<script async src="./scripts/Cart/index.js"type="module" ></script>
+		<script async src="./scripts/Cart/index.js" type="module"></script>
 		<script async src="index.js" type="module"></script>
 	</body>
 </html>

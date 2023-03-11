@@ -1,13 +1,6 @@
 import { products } from "./scripts/productsData.js";
 import { render } from "./scripts/Product/index.js";
-import { stateManager } from "./scripts/local.js";
+import { handleState } from "./scripts/local.js";
 
-export const state = stateManager(products);
+export const state = handleState(products);
 render(state);
-
-
-
-
-
-
-
